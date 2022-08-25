@@ -1,7 +1,7 @@
 {
     "name": "pw6/php-csv-utils",
     "description": "php-csv-utils",
-    "license": "GNU Lesser General Public License",
+    "license": "LGPL-2.0",
     "authors": [
         {
             "name": "Luke Visinoni"
