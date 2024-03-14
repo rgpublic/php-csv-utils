@@ -36,6 +36,13 @@ class Csv_Reader extends Csv_Reader_Abstract
     protected $headerRow;
 
     /**
+     * The current row
+     * @var array
+     * @access protected
+     */
+    protected $current;
+
+    /**
      * Class constructor
      *
      * @param string Path to csv file we want to open
