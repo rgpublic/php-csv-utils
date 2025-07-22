@@ -49,7 +49,7 @@ class Csv_Reader extends Csv_Reader_Abstract
      * @param Csv_Dialect If a dialect is not provided, Csv_Reader will attempt to guess the file's dialect
      * @throws Csv_Exception_FileNotFound
      */
-    public function __construct($path, Csv_Dialect $dialect = null)
+    public function __construct($path, ?Csv_Dialect $dialect = null)
     {
         // open the file
         $this->setPath($path);
@@ -104,7 +104,7 @@ class Csv_Reader extends Csv_Reader_Abstract
      */
     protected function loadRow()
     {
-        if (!$this->current = fgetcsv($this->handle, $this->maxRowSize, $this->dialect->delimiter, $this->dialect->quotechar)) {
+        if (!$this->current = fgetcsv($this->handle, $this->maxRowSize, $this->dialect->delimiter, $this->dialect->quotechar, '')) {
             // we actually don't want to throw an exception... that's a little dramatic. maybe log it?
             // throw new Csv_Exception('Invalid format for row ' . $this->position);
         }

@@ -17,7 +17,7 @@ class Csv_Reader_String extends Csv_Reader
      * Build a Csv Reader from a string.
      * @todo I am beginning to think that the default should be that it accepts a string.
      */
-    public function __construct($string, Csv_Dialect $dialect = null)
+    public function __construct($string, ?Csv_Dialect $dialect = null)
     {
         if (is_null($dialect)) {
             $dialect = $this->detectDialect($string);
