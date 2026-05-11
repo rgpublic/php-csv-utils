@@ -64,7 +64,7 @@ class Csv_Dialect
     public $skipinitialspace;
 
     /**
-     * @var boolean Set to true to ignore blank lines when reading
+     * @var bool Set to true to ignore blank lines when reading
      */
     public $skipblanklines = true;
 

@@ -214,7 +214,7 @@ class Csv_Writer
      * Returns true if input contains quotechar, delimiter or any of the characters in lineterminator
      *
      * @param string A single value to be checked for special characters
-     * @return boolean True if contains any special characters
+     * @return bool True if contains any special characters
      * @access protected
      */
     protected function containsSpecialChars($input)

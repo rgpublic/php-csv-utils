@@ -83,7 +83,7 @@ abstract class Csv_Reader_Abstract implements Iterator, Countable
     /**
      *
      *
-     * @param boolean
+     * @param bool
      * @access public
      */
     public function hasHeader($flag = null)

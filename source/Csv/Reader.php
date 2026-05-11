@@ -161,12 +161,12 @@ class Csv_Reader extends Csv_Reader_Abstract
      * Tells whether or not the current row is valid - called after next and rewind
      *
      * @access public
-     * @return boolean True if the current row is valid
+     * @return bool True if the current row is valid
      */
     public function valid():bool
     {
         if (is_resource($this->handle))
-            return (boolean)!feof($this->handle);
+            return (bool)!feof($this->handle);
         return false;
     }
 
@@ -202,7 +202,7 @@ class Csv_Reader extends Csv_Reader_Abstract
      */
     public function key():mixed
     {
-        return (integer)$this->position;
+        return (int)$this->position;
     }
 
     /**
@@ -217,7 +217,7 @@ class Csv_Reader extends Csv_Reader_Abstract
         $lines = 0;
         foreach ($this as $row) $lines++;
         $this->rewind();
-        return (integer)$lines;
+        return (int)$lines;
     }
 
     public function setPosition($position)
